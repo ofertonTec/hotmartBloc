@@ -1,6 +1,17 @@
 {% extends './layout.html'%}
-{%block title%}Inicio{%endblock%}
+{%block title%}HotmartBloc{%endblock%}
 
 {%block body%}
-<p>Inicio</p>
+
+<div class="container m-50">
+    <div class="row row-cols-2 row-cols-md-4 g-4 mb-3">
+      {%for producto in productos%}
+      <p>{{producto[0]}}</p>
+      <p>{{producto[1]}}</p>
+      <p>{{producto[2]}}</p>
+      <p>{{producto[3]}}</p>
+      {%endfor%}
+    </div>
+</div>
+
 {%endblock%}
