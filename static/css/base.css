@@ -5,3 +5,17 @@ font-weight: bold
 #img_card_header{
     width: 250px;
 }
+body{
+    background-color: rgb(197, 194, 194);
+}
+#container_tarjeta{
+    height: 90%;
+}
+#container_tarjeta:hover >img {
+    transition: transform .4s;
+    transform: scale(0.95);
+    z-index: 100;
+}
+#container_tarjeta:hover{
+    cursor: pointer;
+}

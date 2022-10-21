@@ -1,17 +1,30 @@
 {% extends './layout.html'%}
-{%block title%}HotmartBloc{%endblock%}
+{%block title%}Hotmart{%endblock%}
 
 {%block body%}
+<br>
 
-<div class="container m-50">
-    <div class="row row-cols-2 row-cols-md-4 g-4 mb-3">
-      {%for producto in productos%}
-      <p>{{producto[0]}}</p>
-      <p>{{producto[1]}}</p>
-      <p>{{producto[2]}}</p>
-      <p>{{producto[3]}}</p>
-      {%endfor%}
-    </div>
+<!--Creando una tarjeta-->
+<div class="container">
+  <div class="row row-cols-2 row-cols-md-4 g-3">
+    {% for producto in productos%}
+    <a href="{{url_for('iniciar')}}"  class="text-decoration-none">
+      <div class="col">
+        <div class="card h-100 " id="container_tarjeta">
+              <img  src="{{url_for('static',filename='img/decoracion.png')}}" alt="" class="card-img img-thumbnail">
+            <div class="card-body " >
+              <p class="card-title fw-bold">{{producto[1]}}</p>
+              <p class="card-text h3" style="color: green;">{{producto[3]}} US$</p>
+              <p class="card-text h6 text-muted">Precio del producto</p>
+            </div>
+            
+        </div>
+      </div>
+    </a>
+    
+    {% endfor%}
+  </div>
 </div>
+
 
 {%endblock%}
