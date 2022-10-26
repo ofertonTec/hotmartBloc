@@ -1,0 +1,52 @@
+{%extends './modulo_login/base_login.html'%}
+{%block title%}Nuevo Usuario{%endblock%}
+
+{%block body%}
+
+<div class="container">
+    <br>
+    <form action="{{url_for('crearNuevoUsuario')}}" method="post" class="d-grid justify-content-center" autocomplete="off">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="dni">Documento</label>
+                <input type="text" class="form-control" id="dni" name="dni" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="col-sm-6">
+                <label for="apellido">Apellidos</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-sm-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-sm-6">
+                <label for="genero">Genero</label>
+                <select class="form-control" name="genero" required>
+                    <option value="" class="active">Seleccione</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-12 mb-5">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" required>
+        </div>
+        <div class="row-cols-3">
+            <a href="{{url_for('mostrarLogin')}}" class="btn btn-outline-primary ">Atras</a>
+            <button class="btn btn-success">Registrar</button>
+        </div>
+       
+    </form>
+
+</div>
+{%endblock%}

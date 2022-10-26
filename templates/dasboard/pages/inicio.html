@@ -1,14 +1,8 @@
-{% extends './layout.html'%}
-{%block title%}Hotmart{%endblock%}
-
-{%block body%}
-<br>
-
 <!--Creando una tarjeta-->
+
 <div class="container">
   <div class="row row-cols-2 row-cols-md-4 g-3">
     {% for producto in productos%}
-    <a href="{{url_for('iniciar')}}"  class="text-decoration-none">
       <div class="col">
         <div class="card h-100 " id="container_tarjeta">
               <img  src="{{url_for('static',filename='img/decoracion.png')}}" alt="" class="card-img img-thumbnail">
@@ -25,6 +19,3 @@
     {% endfor%}
   </div>
 </div>
-
-
-{%endblock%}
